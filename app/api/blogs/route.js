@@ -1,13 +1,16 @@
 import db from "@/app/lib/db";
 
-export async function GET(req, { params }) {
+export async function GET(req) {
   try {
-    const rows = await db.query("SELECT * FROM posts");
+    const result = await db.query("SELECT * FROM posts");
+
     return new Response(
-      JSON.stringify({ success: true, data: rows }), 
+      JSON.stringify({ success: true, data: result.rows }),
       { status: 200 }
     );
   } catch (error) {
+    console.error("POSTS API ERROR:", error);
+
     return new Response(
       JSON.stringify({ success: false, error: error.message }),
       { status: 500 }
