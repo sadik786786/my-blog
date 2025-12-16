@@ -43,7 +43,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-x-hidden">
       {/* Background with overlay */}
       <div 
-        className="fixed inset-0 z-0 bg-[url('./img/background.png')] bg-cover bg-center bg-no-repeat opacity-20"
+        className="fixed inset-0 z-0 bg-[url('/img/background.png')] bg-cover bg-center bg-no-repeat opacity-20"
       />
 
       {/* Animated gradient overlay */}
